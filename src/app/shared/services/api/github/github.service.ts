@@ -10,6 +10,7 @@ export class GithubService {
   constructor(private httpClient: HttpClient) { }
 
   getCommits() {
-    return this.httpClient.get(environment.baseApiUrl + environment.commitApiUrl);
+    // console.log("url",environment.baseApiUrl + '/repos/' + environment.username + '/' + environment.repoName + "/commits");
+    return this.httpClient.get(environment.baseApiUrl + '/repos/' + environment.username + '/' + environment.repoName + "/commits");
   }
 }

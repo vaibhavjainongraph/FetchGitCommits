@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   baseApiUrl: "https://api.github.com",
-  commitApiUrl: "/repos/vaibhavjainongraph/FetchGitCommits/commits"
+  username: "vaibhavjainongraph",
+  repoName: "FetchGitCommits"
 };
 
 /*
