@@ -1,1 +1,37 @@
-<p>github works!</p>
+<div class="container">
+    <div class="row mt-2">
+        <div class="col-8 mx-auto">
+            <div class="mx-auto p-3 bg-dark text-white rounded">
+                <div class="row">
+                    <div class="col-6 p-2">
+                        <span>Commits List of GitHub Repository</span>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-primary float-right" (click)="reloadCommits()">Reload</button>
+                        <div class="spinner-border float-left" role="status" *ngIf="isLoading">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-2" *ngFor="let commit of commits">
+        <div class="col-md-8 mx-auto">
+            <div class="card">
+                <div class="card-body py-2">
+                    <h6 class="card-title mb-0">{{ commit.commit.author.name }} <span class="text-small"> -
+                            {{ commit.commit.author.email }}</span></h6>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <p class="card-text medium text-muted">{{ commit.commit.message }}</p>
+                        </div>
+                        <div class="col-sm-4 text-right small">
+                            <a href="{{ commit.html_url }}" class="card-link medium" target="_blank">Browse Commit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
