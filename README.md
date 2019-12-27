@@ -1,27 +1,37 @@
-# GitCommitList
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.16.
+## Please follow all the below instrutions to setup the project and use it 
 
-## Development server
+(i) Install the node version 10.15.3 
+    (You can use this link to install the node : https://nodejs.org/download/release/v10.15.3/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+(ii) After installing the node use the below command to install the Angular CLI
+     npm install -g @angular/cli@8.3.21
 
-## Code scaffolding
+(iii) Inside the project directory open the terminal and use the below command to install the node_modules (libraries to run the project properly)
+     npm install
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+(iv)  When you have installed the libraries then use the below command to serve or use the project in browser. This command will open the browser automatically
+     ng serve --open
 
-## Build
+(v) In case if the browser is not opened then open the browser manually of your choice and hit the below url 
+    http://localhost:4200
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+(vi) We have used the below github api to fetch the list of commit :
+    GET /repos/:owner/:repo/commits
 
-## Running unit tests
+(vii) In project we are displaying the below field from the received data :-
+     Author Name
+     Author Email
+     Commit Message
+     Commit Link
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+(viii) To consume commmit API for other git repo or account we need to update env variables respectively 
+    username : 'github user name'
+    repoName : 'repo Name'
 
-## Running end-to-end tests
+Repo link : https://github.com/vaibhavjainongraph/FetchGitCommits // code base available here at public repo
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+    
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
