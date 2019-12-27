@@ -1,8 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { GithubComponent } from './components/github/github.component';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: 'home',
+    component: GithubComponent,
+    data: { title: 'Heroes List' }
+  },
+  { path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  { path: '**', component: GithubComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
